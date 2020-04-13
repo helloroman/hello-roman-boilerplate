@@ -1,0 +1,9 @@
+{
+  "name": "hello-roman-boilerplate",
+  "version": "1.0.0",
+  "description": "Simple boilerplate for static website",
+  "scripts": {
+  },
+  "author": "",
+  "license": "ISC"
+}
