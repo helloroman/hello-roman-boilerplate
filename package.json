@@ -4,13 +4,11 @@
   "description": "Simple boilerplate for static website",
   "scripts": {
     "build:scss": "node-sass --output-style compressed -o dist/styles src/styles",
-    "watch:scss": "onchange -i -v 'src/styles/*.scss' -- npm run build:scss",
-    "lint:js": "eslint --fix src/js/*.js",
-    "transpile:js": "babel src -d dist",
-    "build:js": "parrallelshell 'npm run lint:js' 'npm run transpile:js'",
-    "watch:js": "onchange -i -v 'src/js/*.js' -- npm run lint:js",
-    "start": "browser-sync -s -f './index.html, dist/**/*, src/**/*'",
-    "watch:all": "parallelshell 'npm start' 'npm run watch:scss' 'npm run watch:js'"
+    "watch:scss": "onchange -i -v \"./src/styles/*.scss\" -- npm run build:scss",
+    "build:js": "eslint --fix ./src/js/*.js && babel src -d dist",
+    "watch:js": "onchange -i -v \"./src/js/*.js\" -- eslint --fix ./src/js/*.js",
+    "start": "browser-sync -s -f \"./index.html, dist/**/*, src/**/*\"",
+    "watch:all": "parallelshell \"npm start\" \"npm run watch:scss\" \"npm run watch:js"
   },
   "author": "",
   "license": "ISC",
