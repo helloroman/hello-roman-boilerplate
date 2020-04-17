@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Simple boilerplate for static website",
   "scripts": {
-    "build:scss": "node-sass --output-style compressed -o dist/styles src/styles",
+    "build:scss": "node-sass --source-map-embed --output-style compressed -o dist/styles src/styles",
     "watch:scss": "onchange -i -v \"./src/styles/*.scss\" -- npm run build:scss",
     "lint:js": "eslint --fix ./src/js/*.js",
     "watch:js": "onchange -i -v \"./src/js/*.js\" -- npm run lint:js",
