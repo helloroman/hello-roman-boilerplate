@@ -9,12 +9,12 @@
     "watch:js": "onchange -i -v \"./src/js/*.js\" -- npm run lint:js",
     "start": "browser-sync -s -f \"./index.html, dist/**/*, src/**/*\"",
     "watch:all": "parallelshell \"npm start\" \"npm run watch:scss\" \"npm run watch:js",
-    "autoprefixer": "npx postcss dist/styles/*.css --use autoprefixer --map -d dist/styles/"
+    "autoprefixer": "npx postcss dist/styles/*.css --use autoprefixer --map -d dist/styles/",
+    "stylelint": "npx stylelint --fix src/styles/*.scss"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "postcss-cli": "^7.1.0",
     "autoprefixer": "^9.7.5",
     "browser-sync": "^2.26.7",
     "eslint": "^6.8.0",
@@ -22,7 +22,10 @@
     "eslint-plugin-import": "^2.20.2",
     "node-sass": "^4.13.1",
     "onchange": "^6.1.0",
-    "parallelshell": "^3.0.1"
+    "parallelshell": "^3.0.1",
+    "postcss-cli": "^7.1.0",
+    "stylelint": "^13.3.3",
+    "stylelint-config-standard": "^20.0.0"
   },
   "dependencies": {}
 }
