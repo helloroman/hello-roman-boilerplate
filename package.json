@@ -8,7 +8,7 @@
     "lint:js": "eslint --fix ./src/js/*.js",
     "watch:js": "onchange -i -v \"./src/js/*.js\" -- npm run lint:js",
     "start": "browser-sync -s -f \"./index.html, dist/**/*, src/**/*\"",
-    "watch:all": "parallelshell \"npm start\" \"npm run watch:scss\" \"npm run watch:js"
+    "watch:all": "parallelshell \"npm start\" \"npm run watch:scss\" \"npm run watch:js\""
   },
   "author": "",
   "license": "ISC",
